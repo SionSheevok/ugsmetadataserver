@@ -1,0 +1,21 @@
+[package]
+name = "ugs-metadata-server"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+chrono = { version = "0.4", features = ["serde"] }
+rocket = { version = "0.5.0-rc.2", features = ["json"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_repr = { version = "0.1" }
+sqlx = { version = "0.5.9", features = ["mysql", "macros", "chrono"] }
+async-std = { version = "1", features = ["attributes"] }
+log = { version = "0.4" }
+regex = { version = "1.7" }
+lazy_static = { version = "1.4" }
+
+[dependencies.rocket_db_pools]
+version = " 0.1.0-rc.2"
+features = ["sqlx", "sqlx_mysql", "sqlx_macros"]
